@@ -1,0 +1,50 @@
+{
+  "name": "hyperapp-ssr",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Server-side rendering helpers for Hyperapp",
+  "author": "Zacharias Enochsson",
+  "license": "MIT",
+  "keywords": [
+    "hyperapp",
+    "ssr",
+    "server-side-rendering",
+    "render-to-string"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./vdom-html": {
+      "types": "./dist/vdom-html.d.ts",
+      "import": "./dist/vdom-html.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && vitest run",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "hyperapp": "^2.0.22"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "hyperapp": "^2.0.22",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaceno/hyperapp-ssr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zaceno/hyperapp-ssr/issues"
+  },
+  "homepage": "https://github.com/zaceno/hyperapp-ssr#readme"
+}
